@@ -1,0 +1,21 @@
+body{
+    background-color: mediumpurple;
+}
+h2,p{
+    color: white;
+    font-size:medium ;
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 20px;
+    text-align: center;
+}
+h1{
+    color: sandybrown;
+}
+img{
+    margin: 20px;
+    text-align: center;
+}
+.imges{
+    margin: 20px;
+    text-align: center;
+}

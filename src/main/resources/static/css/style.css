@@ -1,7 +1,11 @@
 body{
     background-color: mediumpurple;
 }
-h2,p{
+img{
+    margin: 20px;
+    text-align: center;
+}
+h2,p,h3,img{
     color: white;
     font-size:medium ;
     font-family: Arial, Helvetica, sans-serif;
@@ -11,10 +15,7 @@ h2,p{
 h1{
     color: sandybrown;
 }
-img{
-    margin: 20px;
-    text-align: center;
-}
+
 .imges{
     margin: 20px;
     text-align: center;

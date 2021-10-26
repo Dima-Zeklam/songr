@@ -9,7 +9,7 @@ import org.springframework.web.servlet.view.RedirectView;
 @Controller
 public class AlbumController {
     @Autowired
-    AlbumRepository albumRespository;
+    AlbumRepository albumRepository;
 
     @GetMapping("/hello")
     @ResponseBody
@@ -29,7 +29,7 @@ public class AlbumController {
 
     @GetMapping("/showAllalbums")
     public String showAllalbums(Model model){
-        model.addAttribute("albums",albumRespository.findAll());
+        model.addAttribute("albums", albumRepository.findAll());
         return "albums.html";
     }
 
@@ -37,7 +37,7 @@ public class AlbumController {
 
     public RedirectView addAllalbums(@RequestParam(value = "title")String title, @RequestParam(value = "artist")String artist, @RequestParam(value = "songCount")int songCount, @RequestParam(value = "length")int length, @RequestParam(value = "imageUrl")String imageUrl){
         Album album=new Album(title,artist,songCount,length,imageUrl);
-        albumRespository.save(album);
+        albumRepository.save(album);
         return new RedirectView("/showAllalbums");
     }
 

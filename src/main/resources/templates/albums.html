@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
-    <link th:href="@{style.css}" rel="stylesheet">
+    <link th:href="@{css/style.css}" rel="stylesheet" >
 </head>
 <body>
 <h2>Added albums</h2>
@@ -27,7 +27,7 @@
     <h3>Artist<span th:text="${album.artist}"></span></h3>
     <h3>Song Count<span th:text="${album.songCount}"></span></h3>
     <h3>Length<span th:text="${album.length}"></span></h3>
-    <img th:src="${album.imageUrl}">
+    <div class="imges"><img th:src="${album.imageUrl}"></div>
 
 
 </div>

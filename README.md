@@ -10,6 +10,6 @@
 
 # lab 12 
 Update your Album model so that it can be saved in a database,
-create a interface repository AlbumRepository extends CrudRepository  to save the data into database.
-made sure to try each route in the appliction. 
+create an interface repository AlbumRepository extends CrudRepository  to save the data into database.
+made sure to try each route in the application. 
 

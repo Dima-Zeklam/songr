@@ -8,7 +8,7 @@ import java.util.List;
 
 @Entity
 public class Album {
-    //Album has a title, an artist, a songCount, a length (in seconds), and an imageUrl
+    
     public Album() {
 
     }

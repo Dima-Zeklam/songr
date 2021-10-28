@@ -1,26 +1,27 @@
-package com.example.songr;
+package com.example.songr.models;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import org.hibernate.annotations.Type;
+
+import javax.persistence.*;
+import java.util.List;
 
 
 @Entity
 public class Album {
     //Album has a title, an artist, a songCount, a length (in seconds), and an imageUrl
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int id;
-private String title;
-private String artist;
-private int songCount;
-private int length;
-private String imageUrl;
-
     public Album() {
 
     }
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private int id;
+    private String title;
+    private String artist;
+    private int songCount;
+    private int length;
+    private String imageUrl;
+
+
 
     public int getId() {
         return id;
@@ -37,6 +38,7 @@ private String imageUrl;
         this.length = length;
         this.imageUrl = imageUrl;
     }
+
 
     public String getTitle() {
         return title;

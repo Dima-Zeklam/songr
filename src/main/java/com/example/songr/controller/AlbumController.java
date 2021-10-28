@@ -1,16 +1,24 @@
-package com.example.songr;
+package com.example.songr.controller;
 
+import com.example.songr.models.Album;
+import com.example.songr.models.Songs;
+import com.example.songr.repository.AlbumRepository;
+import com.example.songr.repository.SongsRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.view.RedirectView;
 
+import java.util.List;
+
 @Controller
 public class AlbumController {
     @Autowired
     AlbumRepository albumRespository;
 
+    @Autowired
+    SongsRepository songsRepository;
     @GetMapping("/hello")
     @ResponseBody
     public String helloH() {

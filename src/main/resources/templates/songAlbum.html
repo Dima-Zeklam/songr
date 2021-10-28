@@ -1,0 +1,33 @@
+<!doctype html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://thymeleaf.org" lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Songs</title>
+</head>
+<body>
+<h2>Added to Albums</h2>
+<form action="#" th:action="'/addOneSong/'+${particular.id}" method="post">
+    <label>Title</label>
+    <input type="text" name="title" id="title">
+    <label>trackNumber:</label>
+    <input type="number" name="trackNumber" id="trackNumber">
+    <label>Length:</label>
+    <input type="number" name="length" id="length">
+    <input type="submit" value="Added Albums one song">
+</form>
+
+<div>
+    <h3>ID:<span th:text="${particular.id}"></span></h3>
+    <h2>Title:<span th:text="${particular.title}"></span></h2>
+    <h3>Artist<span th:text="${particular.artist}"></span></h3>
+    <h3>Song Count<span th:text="${particular.songCount}"></span></h3>
+    <h3>Length<span th:text="${particular.length}"></span></h3>
+
+    <img th:src="${particular.imageUrl}">
+</div>
+</body>
+</html>

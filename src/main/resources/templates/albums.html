@@ -10,13 +10,13 @@
 <h2>Added albums</h2>
 <form action="/addAllalbums" method="POST">
     <label>Title</label>
-    <input type="text" name="title" id="title">
+    <input type="text" name="title" >
     <label>Artist:</label>
     <input type="text" name="artist" id="artist">
     <label>SongCount:</label>
     <input type="number" name="songCount" id="songCount">
     <label>Length:</label>
-    <input type="number" name="length" id="length">
+    <input type="number" name="length" >
     <label>ImageUrl:</label>
     <input type="text" name="imageUrl" id="imageUrl">
     <input type="submit" value="Added">
@@ -31,5 +31,30 @@
 
 
 </div>
+<!--<h2>Add New Songs</h2>-->
+<!--<form  action="/addsongs" method="POST" >-->
+<!--      <label >Title</label>-->
+<!--    <input type="text"  name="title" >-->
+<!--    <label  >Length</label>-->
+<!--    <input type="number"  name="length"  >-->
+<!--    <label for="trackNumber" >trackNumber</label>-->
+<!--    <input type="number"  name="trackNumber" id="trackNumber">-->
+<!--    <input type="hidden" name="album" th:value="${album.title}">-->
+<!--    <button type="submit" >Add Song</button>-->
+<!--</form>-->
+
+
+<!--<ul th:each="allSongs: ${album.songs}">-->
+<!--    <li>-->
+<!--        Song : <span>th:text="${allSongs.title}"</span>-->
+<!--    </li>-->
+<!--    <li>-->
+<!--        Song length: <span>th:text="${allSongs.length}"</span>-->
+<!--    </li>-->
+<!--    <li>-->
+<!--        Song trackNumber:<span>th:text="${allSongs.trackNumber}"</span>-->
+<!--    </li>-->
+<!--</ul>-->
+
 </body>
 </html>

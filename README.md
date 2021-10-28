@@ -13,3 +13,7 @@ Update your Album model so that it can be saved in a database,
 create a interface repository AlbumRepository extends CrudRepository  to save the data into database.
 made sure to try each route in the appliction. 
 
+Lab: 13 - Related Resources and Integration Testing
+create Song entity, to make songs for each album
+the user should input the name,length and trackNumber for specific album bu visiting http://localhost:8080/addOneSong/{{id}}
+http://localhost:8080/songs to display the songs 

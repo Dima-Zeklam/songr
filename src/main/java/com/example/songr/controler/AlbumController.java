@@ -13,34 +13,22 @@ public class AlbumController {
     @Autowired
     AlbumRepository albumRepository;
 
-    @GetMapping("/hello")
-    @ResponseBody
-    public String helloH() {
-        return ("hello world");
-    }
-    @GetMapping("/")
-    public String homePage() {
-        return ("home.html");
-    }
-
-    @GetMapping("/capitalize/{word}")
-    public String renderCapitalizePage(Model model, @PathVariable String word) {
-        model.addAttribute("name", word.toUpperCase());
-        return "hello.html";
-    }
-
-    @GetMapping("/showAllalbums")
+    @GetMapping("/AlbumsList")
     public String showAllalbums(Model model){
-        model.addAttribute("albums", albumRepository.findAll());
-        return "albums.html";
+        model.addAttribute("albumsList", albumRepository.findAll());
+        return "albumslist.html";
     }
 
-    @PostMapping("/addAllalbums")
-
-    public RedirectView addAllalbums(@RequestParam(value = "title")String title, @RequestParam(value = "artist")String artist, @RequestParam(value = "songCount")int songCount, @RequestParam(value = "length")int length, @RequestParam(value = "imageUrl")String imageUrl){
-        Album album=new Album(title,artist,songCount,length,imageUrl);
+    @GetMapping("/AddAlbum")
+    public String AddAlbums(Model model){
+        Album album=new Album();
+        model.addAttribute("album", album);
+        return "albumForm.html";
+    }
+    @PostMapping("/AddAlbum")
+    public RedirectView addThisAlbum(@ModelAttribute("album") Album album){
         albumRepository.save(album);
-        return new RedirectView("/showAllalbums");
+        return new RedirectView("/AlbumsList");
     }
 
 }

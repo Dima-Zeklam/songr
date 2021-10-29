@@ -1,0 +1,74 @@
+<!doctype html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://thymeleaf.org" lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link th:href="@{css/style.css}" rel="stylesheet" >
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <title>Albums List</title>
+
+</head>
+<body>
+<header>
+    <h1>Welcome to songs Application </h1>
+
+    <ul class="ulclass">
+        <div class="class1">
+            <li><a th:href="@{/AlbumsList}" >Album List</a></li>
+        </div>
+        <div class="class2">
+            <a th:href="@{/AddAlbum}" class="btn btn-primary btn-sm mb-3"> Add Album </a>
+        </div>
+        <div class="class1">
+            <li>   <a th:href="@{/SongsList}">Songs List </a></li>
+        </div>
+        <div class="class2">
+            <a th:href="@{/AddSongs}" class="btn btn-primary btn-sm mb-3">Add Song</a>
+        </div>
+
+    </ul>
+
+
+
+</header>
+<table  style="border: black 1px" class="table table-striped table-responsive-md" >
+    <thead>
+    <tr>
+        <th>ID</th>
+        <th >Title</th>
+        <th>Length</th>
+        <th>Track Number</th>
+        <th>Album</th>
+
+    </tr>
+    </thead>
+    <tbody th:each="song :${SongList}">
+    <tr >
+        <td>
+            [[${song.id}]]
+        </td>
+         <td>
+            [[${song.title}]]
+        </td>
+        <td>
+            [[${song.length}]]
+        </td>
+        <td>
+            [[${song.trackNumber}]]
+        </td>
+
+        <td>
+            [[${song.album.title}]]
+        </td>
+
+    </tr>
+
+    </tbody>
+</table>
+<br >
+<br >
+</body>
+</html>

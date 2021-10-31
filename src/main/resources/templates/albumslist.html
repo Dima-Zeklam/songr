@@ -43,6 +43,7 @@
         <th>Song Count</th>
         <th>Length</th>
         <th>Album Image</th>
+        <th>Songs</th>
     </tr>
     </thead>
     <tbody>
@@ -64,6 +65,9 @@
         </td>
         <td>
             <img th:src="${album.imageUrl}" width="200">
+        </td>
+        <td>
+            <a th:href="${'/albums/' +album.id}"> See the songs for this album  </a>
         </td>
     </tr>
     </tbody>
